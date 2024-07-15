@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drag and Drop items for Bootstrap 4 - Advanced Components</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Fixed header style */
+    .fixed-header {
+      overflow-y: auto;
+      max-height: 300px; /* Adjust max height as needed */
+    }
+  </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row mt-4">
+          <div class="col">
+      
+            <div class="fixed-header">
+              <h3>Demo 1</h3>
+              <ul class="list-group" id="demo11">
+                <li class="list-group-item">Cras justo odio</li>
+                <li class="list-group-item">Dapibus ac facilisis in</li>
+                <li class="list-group-item">Morbi leo risus</li>
+                <li class="list-group-item">Porta ac consectetur ac</li>
+                <li class="list-group-item">Vestibulum at eros</li>
+              </ul>
+            </div>
+      
+            <div class="row">
+              <div class="col">
+                <div class="fixed-header mt-4">
+                  <h3>Demo 2</h3>
+                  <ul class="list-group" id="demo22">
+                    <li>test</li>
+                    <li>test</li>
+                    <li>test</li>
+                    <li>test</li>
+                    <li>test</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col">
+                <div class="fixed-header mt-4">
+                  <h3>Demo 3</h3>
+                  <ul class="list-group" id="demo33">
+                    
+                  </ul>
+                </div>
+              </div>
+            </div>
+      
+          </div>
+        </div>
+      </div>
+      
+
+<!-- Bootstrap JS and Sortable.js -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/RubaXa/Sortable/Sortable.min.js"></script>
+
+<!-- Initialization script -->
+<script>
+  Sortable.create(demo1, {
+    animation: 100,
+    group: 'list-1',
+    draggable: '.list-group-item',
+    handle: '.list-group-item',
+    sort: true,
+    filter: '.sortable-disabled',
+    chosenClass: 'active'
+  });
+
+  Sortable.create(demo2, {
+    group: 'list-1',
+    handle: '.list-group-item'
+  });
+
+  Sortable.create(demo3, {
+    group: 'list-1',
+    handle: '.list-group-item'
+  });
+</script>
+
+</body>
+</html>
